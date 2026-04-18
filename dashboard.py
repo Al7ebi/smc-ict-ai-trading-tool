@@ -12,5 +12,5 @@ target = st.sidebar.number_input("Target")
 
 if st.button("Send Signal"):
     data = {"product_id": product_id, "size": size, "side": side, "entry": entry, "stop": stop, "target": target}
-    resp = requests.post("web-production-6c2d0.up.railway.app/webhook", json=data)
+    resp = requests.post("https://web-production-6c2d0.up.railway.app/webhook", json=data)
     st.write("Trade Response:", resp.json())
